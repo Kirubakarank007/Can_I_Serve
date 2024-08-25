@@ -21,14 +21,14 @@
 
     <!-- insert 4 digit OTP Field -->
     <TextView
-        android:id="@+id/otp1"
+        android:id="@+id/otp"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:text="Insert 4 digit OTP send to this
-        number: xxxxx xxxxx"
+        android:layout_height="wrap_content"
+        android:text="Insert 4 digit OTP send to this number:
+        xxxxx xxxxx"
         android:textColor="@color/white"
         android:gravity="center"
-        android:padding="10dp"
+        android:padding="50dp"
         android:textSize="25sp"
         android:background="@drawable/button_bg"
         android:layout_marginBottom="30dp"
@@ -37,70 +37,92 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:weightSum="9"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
        >
     <!-- otp 1 Field -->
     <EditText
-        android:id="@+id/age"
+        android:id="@+id/otp1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
+        android:hint="0"
+        android:text=""
         android:textColor="@color/dark"
         android:textStyle="bold"
+        android:maxLength="1"
         android:textSize="20sp"
-        android:layout_margin="20dp"
         android:padding="16dp"
         android:background="@drawable/text_view_bg"
-        android:layout_marginBottom="16dp"
-        android:inputType="number"/>
-
+        android:inputType="number"
+        android:autofillHints="" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
         <EditText
             android:id="@+id/otp2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1"
+            android:hint="0"
+            android:text=""
             android:textColor="@color/dark"
             android:textStyle="bold"
+            android:maxLength="1"
             android:textSize="20sp"
-            android:layout_margin="20dp"
-
             android:padding="16dp"
             android:background="@drawable/text_view_bg"
-            android:layout_marginBottom="16dp"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:autofillHints="" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
         <EditText
             android:id="@+id/otp3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1"
+            android:text=""
+            android:hint="0"
             android:textColor="@color/dark"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:layout_margin="20dp"
-
             android:padding="16dp"
+            android:maxLength="1"
             android:background="@drawable/text_view_bg"
-            android:layout_marginBottom="16dp"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:autofillHints="" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
         <EditText
             android:id="@+id/otp4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1"
+            android:text=""
+            android:hint="0"
+            android:maxLength="1"
             android:textColor="@color/dark"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:layout_margin="20dp"
             android:padding="16dp"
             android:background="@drawable/text_view_bg"
-            android:layout_marginBottom="16dp"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:autofillHints="" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
 </LinearLayout>
 
     <!-- Send OTP Button -->
     <Button
         android:id="@+id/verify_btn"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Verify"
         android:background="@drawable/button_bg"

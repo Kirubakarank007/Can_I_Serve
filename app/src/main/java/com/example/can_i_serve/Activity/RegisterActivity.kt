@@ -1,5 +1,6 @@
 package com.example.can_i_serve.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
@@ -25,16 +26,8 @@ class RegisterActivity:AppCompatActivity() {
             binding.role.showDropDown()
         }
         binding.sendotpBtn.setOnClickListener {
-            binding.fragmentContainer.visibility= View.VISIBLE
-            loadFragment(OTPVerificationActivity())
+          val intent= Intent(this,OTPVerificationActivity::class.java)
+            startActivity(intent)
         }
-    }
-
-
-    fun loadFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, fragment)
-        transaction.addToBackStack(null) // Adds to back stack so that the user can navigate back
-        transaction.commit()
     }
 }

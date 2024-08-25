@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.can_i_serve.databinding.OtpScreenActivityBinding
-import com.example.can_i_serve.databinding.OtpScreenFragmentBinding
 
 class OTPVerificationActivity: AppCompatActivity() {
     private lateinit var binding:OtpScreenActivityBinding
