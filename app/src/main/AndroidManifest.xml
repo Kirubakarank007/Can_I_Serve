@@ -22,6 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.can_i_serve.Activity.RegisterActivity" />
+        <activity android:name="com.example.can_i_serve.Activity.PasswordActivity" />
+        <activity android:name="com.example.can_i_serve.Activity.LoginActivity" />
+        <activity android:name="com.example.can_i_serve.Activity.OTPVerificationActivity" />
     </application>
 
 </manifest>

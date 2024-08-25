@@ -1,15 +1,12 @@
 package com.example.can_i_serve.Activity
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.MotionEvent
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
-import com.example.can_i_serve.Fragment.OTPVerificationFragment
 import com.example.can_i_serve.R
-import com.example.can_i_serve.databinding.ActivityMainBinding
 import com.example.can_i_serve.databinding.RegisterActivityBinding
 import com.example.can_i_serve.utils
 
@@ -29,16 +26,8 @@ class RegisterActivity:AppCompatActivity() {
             binding.role.showDropDown()
         }
         binding.sendotpBtn.setOnClickListener {
-            binding.fragmentContainer.visibility= View.VISIBLE
-            loadFragment(OTPVerificationFragment())
+          val intent= Intent(this,OTPVerificationActivity::class.java)
+            startActivity(intent)
         }
-    }
-
-
-    fun loadFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, fragment)
-        transaction.addToBackStack(null) // Adds to back stack so that the user can navigate back
-        transaction.commit()
     }
 }

@@ -1,0 +1,51 @@
+<LinearLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+
+    android:background="@drawable/login_page">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/login"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/app_name" />
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="email or mobile number"
+        android:padding="16dp"
+        android:textColor="@color/dark"
+        android:background="@drawable/text_view_bg"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPersonName"/>
+
+    <!-- Age Input Field -->
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textColor="@color/dark"
+        android:padding="20dp"
+        android:background="@drawable/text_view_bg"
+        android:layout_marginBottom="32dp"
+        android:inputType="number"/>
+
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="Login"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:padding="20dp"/>
+</LinearLayout>
