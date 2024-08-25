@@ -6,8 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textColor="@android:color/black"
-
     android:paddingLeft="10dp"
     android:text="je"
-    android:background="@drawable/text_view_bg"
     android:textSize="18sp" />
