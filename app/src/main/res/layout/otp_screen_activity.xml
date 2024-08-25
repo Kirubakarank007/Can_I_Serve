@@ -1,0 +1,113 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".Activity.RegisterActivity">
+    <!-- Title -->
+    <TextView
+        android:id="@+id/Register_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify OTP"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- insert 4 digit OTP Field -->
+    <TextView
+        android:id="@+id/otp1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="Insert 4 digit OTP send to this
+        number: xxxxx xxxxx"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="25sp"
+        android:background="@drawable/button_bg"
+        android:layout_marginBottom="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+       >
+    <!-- otp 1 Field -->
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@color/dark"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:padding="16dp"
+        android:background="@drawable/text_view_bg"
+        android:layout_marginBottom="16dp"
+        android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/otp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/dark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+
+            android:padding="16dp"
+            android:background="@drawable/text_view_bg"
+            android:layout_marginBottom="16dp"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/otp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/dark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+
+            android:padding="16dp"
+            android:background="@drawable/text_view_bg"
+            android:layout_marginBottom="16dp"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/otp4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/dark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:padding="16dp"
+            android:background="@drawable/text_view_bg"
+            android:layout_marginBottom="16dp"
+            android:inputType="number"/>
+</LinearLayout>
+
+    <!-- Send OTP Button -->
+    <Button
+        android:id="@+id/verify_btn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:background="@drawable/button_bg"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:padding="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>

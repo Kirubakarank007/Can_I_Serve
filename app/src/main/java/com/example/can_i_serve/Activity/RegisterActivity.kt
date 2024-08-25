@@ -1,15 +1,11 @@
 package com.example.can_i_serve.Activity
 
 import android.os.Bundle
-import android.view.MotionEvent
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
-import com.example.can_i_serve.Fragment.OTPVerificationFragment
 import com.example.can_i_serve.R
-import com.example.can_i_serve.databinding.ActivityMainBinding
 import com.example.can_i_serve.databinding.RegisterActivityBinding
 import com.example.can_i_serve.utils
 
@@ -30,7 +26,7 @@ class RegisterActivity:AppCompatActivity() {
         }
         binding.sendotpBtn.setOnClickListener {
             binding.fragmentContainer.visibility= View.VISIBLE
-            loadFragment(OTPVerificationFragment())
+            loadFragment(OTPVerificationActivity())
         }
     }
 
