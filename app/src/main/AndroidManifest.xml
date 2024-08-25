@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.can_i_serve"
+    >
 
     <application
         android:allowBackup="false"
@@ -16,15 +18,15 @@
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" android:launchMode="singleTop" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.can_i_serve.Activity.RegisterActivity" />
-        <activity android:name="com.example.can_i_serve.Activity.PasswordActivity" />
-        <activity android:name="com.example.can_i_serve.Activity.LoginActivity" />
-        <activity android:name="com.example.can_i_serve.Activity.OTPVerificationActivity" />
+        <activity android:name=".Activity.RegisterActivity" android:launchMode="singleTop"/>
+        <activity android:name=".Activity.PasswordActivity" android:launchMode="singleTop" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.OTPVerificationActivity" android:launchMode="singleTop" />
     </application>
 
 </manifest>

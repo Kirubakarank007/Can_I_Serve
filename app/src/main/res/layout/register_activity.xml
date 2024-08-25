@@ -1,25 +1,19 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
     tools:context=".Activity.RegisterActivity">
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:visibility="gone"
-        />
+
     <!-- Title -->
     <TextView
         android:id="@+id/Register_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SEEKER REGISTER"
+        android:text="REGISTERATION"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#000"
@@ -44,6 +38,7 @@
         android:layout_height="wrap_content"
         android:hint="Age"
         android:padding="16dp"
+        android:maxLength="2"
         android:background="@drawable/text_view_bg"
         android:layout_marginBottom="16dp"
         android:inputType="number"/>
@@ -71,15 +66,35 @@
         android:inputType="textEmailAddress"/>
 
     <!-- Phone No Input Field -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/text_view_bg"
+    android:layout_marginBottom="16dp"
+    >
+
+    <com.hbb20.CountryCodePicker
+        app:ccp_defaultNameCode="IND"
+        android:id="@+id/country_code_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_showFlag="true"
+        app:ccp_hintExampleNumber="true"
+        app:ccp_showNameCode="false"
+        app:ccp_showPhoneCode="true"
+        app:ccp_showFullName="false"/>
+
     <EditText
         android:id="@+id/phone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:hint="Phone No"
-        android:padding="16dp"
-        android:background="@drawable/text_view_bg"
-        android:layout_marginBottom="16dp"
+        android:background="@null"
+        android:maxLength="10"
         android:inputType="phone"/>
+</LinearLayout>
 
     <AutoCompleteTextView
         android:id="@+id/role"
@@ -90,9 +105,7 @@
         android:autofillHints=""
         android:background="@drawable/text_view_bg"
         android:hint="Role"
-        android:text=""
-        android:inputType="none"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:text="" />
 
 
     <!-- Send OTP Button -->

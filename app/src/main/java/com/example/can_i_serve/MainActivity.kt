@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         binding.registerBtn.setOnClickListener {
             val intent= Intent(this,RegisterActivity::class.java)
             startActivity(intent)
+
         }
     }
+
+
 }
