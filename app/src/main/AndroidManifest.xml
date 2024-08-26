@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.can_i_serve"
-    >
+    package="com.example.can_i_serve">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="false"
@@ -18,15 +27,23 @@
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" android:launchMode="singleTop" />
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:launchMode="singleTop" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.RegisterActivity" android:launchMode="singleTop"/>
-        <activity android:name=".Activity.PasswordActivity" android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.PasswordActivity"
+            android:launchMode="singleTop" />
         <activity android:name=".Activity.LoginActivity" />
-        <activity android:name=".Activity.OTPVerificationActivity" android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.OTPVerificationActivity"
+            android:launchMode="singleTop" />
     </application>
 
 </manifest>

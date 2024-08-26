@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.InputFilter
 import android.text.InputType
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.can_i_serve.R
 import com.example.can_i_serve.databinding.AlertDialogeBinding
@@ -18,7 +19,7 @@ import com.hbb20.CountryCodePicker
 class RegisterActivity:AppCompatActivity() {
     private lateinit var binding: RegisterActivityBinding
     private lateinit var countryCode:CountryCodePicker
-    private var phoneNumberLength:Int = 0
+    private var phoneNumberLength:Int = 10
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=RegisterActivityBinding.inflate(layoutInflater)
@@ -100,7 +101,8 @@ class RegisterActivity:AppCompatActivity() {
                 location = location,
                 email=email,
                 phone = phone,
-                role = roles
+                role = roles,
+                countryCode = binding.countryCodePicker.selectedCountryCode
             )
             val intent= Intent(this,OTPVerificationActivity::class.java)
             intent.putExtra("register_details",data)

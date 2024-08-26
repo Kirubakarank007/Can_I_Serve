@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "844725212620",
+    "project_id": "can-i-serve",
+    "storage_bucket": "can-i-serve.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844725212620:android:40abd408e435566aaaf969",
+        "android_client_info": {
+          "package_name": "com.example.can_i_serve"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChDNzqEPSw-eGUq92h5vR-l6LQCSa1iPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
