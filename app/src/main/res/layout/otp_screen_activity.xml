@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="9"
+        android:weightSum="13"
         android:gravity="center"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
@@ -117,6 +117,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/otp5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="0"
+            android:maxLength="1"
+            android:textColor="@color/dark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:background="@drawable/text_view_bg"
+            android:inputType="number"
+            android:autofillHints="" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/otp6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="0"
+            android:maxLength="1"
+            android:textColor="@color/dark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:background="@drawable/text_view_bg"
+            android:inputType="number"
+            android:autofillHints="" />
+
 </LinearLayout>
 
     <!-- Send OTP Button -->
