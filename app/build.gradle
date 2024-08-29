@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -54,8 +55,19 @@ dependencies {
     implementation 'com.hbb20:ccp:2.6.0'
     //phone number length
     implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.52'
-// fire base authentication for otp
+    // fire base authentication for otp
     implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
     implementation("com.google.firebase:firebase-auth")
 
+    // 2. Room Runtime
+    implementation("androidx.room:room-runtime:2.6.1")
+    // 3. Room KTX
+    implementation("androidx.room:room-ktx:2.6.1")
+    // 4. Room Compiler
+    kapt("androidx.room:room-compiler:2.6.1")
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.0'
 }

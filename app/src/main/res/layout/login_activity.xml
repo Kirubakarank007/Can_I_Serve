@@ -16,7 +16,7 @@
         android:layout_marginBottom="32dp"
         android:contentDescription="@string/app_name" />
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="email or mobile number"
@@ -28,7 +28,7 @@
 
     <!-- Age Input Field -->
     <EditText
-        android:id="@+id/age"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
@@ -40,7 +40,7 @@
 
 
     <Button
-        android:id="@+id/register_btn"
+        android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_bg"
