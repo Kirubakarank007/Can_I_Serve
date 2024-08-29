@@ -9,7 +9,8 @@ data class RegisterDetails(
     val email: String?,
     val phone: String?,
     val role: Int?,
-    val countryCode:String?
+    val countryCode:String?,
+    var password:String?
 ) : Serializable
 //{
 //

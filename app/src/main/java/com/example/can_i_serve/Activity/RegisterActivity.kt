@@ -61,22 +61,25 @@ class RegisterActivity:AppCompatActivity() {
 
 
     private fun validationInputField() {
-        val name = binding.name.text.toString()
-        val age = binding.age.text
-        val location = binding.location.text.toString()
-        val email = binding.email.text.toString()
-        val phone = binding.phone.text.toString()
+        val name = binding.name.text.toString().trim()
+        val age = binding.age.text.trim()
+        val location = binding.location.text.toString().trim()
+        val email = binding.email.text.toString().trim()
+        val phone = binding.phone.text.toString().trim()
         val role = binding.role.text.toString()
 
 
         if (name.isEmpty()) {
-            alert("Enter name")
+           utils.showAlert(this,"Enter name")
         } else if (age.isEmpty()) {
-            alert("Enter age")
-        }else if(location.isEmpty()){
-            alert("Enter Location")
+            utils.showAlert(this,"Enter age")
+        }else if (age.isNotEmpty() &&  age.toString().toInt()<=18){
+            utils.showAlert(this,"Age is must be greater than 18")
+        }
+        else if(location.isEmpty()){
+            utils.showAlert(this,"Enter Location")
         }else if(email.isEmpty() && phone.isEmpty()){
-            alert("Enter valid email or phone number")
+            utils.showAlert(this,"Enter valid email or phone number")
         }
 //        else if(email.isNotEmpty() && phone.isEmpty() ){
 //          val isValid=  android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
@@ -85,11 +88,11 @@ class RegisterActivity:AppCompatActivity() {
 //            }
 //        }
         else if(phone.isEmpty()){
-            alert("Enter Phone number")
+            utils.showAlert(this,"Enter Phone number")
         }else  if(phone.isNotEmpty() && phone.length!=phoneNumberLength){
-            alert("Enter valid Phone Number")
+            utils.showAlert(this,"Enter valid Phone Number")
         }else if(role.isEmpty()){
-            alert("Select rolw")
+            utils.showAlert(this,"Select rolw")
         }else{
             var roles=0
             if(role=="Provider"){
@@ -102,7 +105,8 @@ class RegisterActivity:AppCompatActivity() {
                 email=email,
                 phone = phone,
                 role = roles,
-                countryCode = binding.countryCodePicker.selectedCountryCode
+                countryCode = binding.countryCodePicker.selectedCountryCode,
+                password = null
             )
             val intent= Intent(this,OTPVerificationActivity::class.java)
             intent.putExtra("register_details",data)
@@ -110,23 +114,4 @@ class RegisterActivity:AppCompatActivity() {
             finish()
         }
     }
-
-     fun alert(message: String) {
-         val bind=AlertDialogeBinding.inflate(layoutInflater)
-        val dialogView = bind.root
-        val alertMessage = bind.alertMessage
-        val alertOkButton = bind.alertOkButton
-        alertMessage.text = message
-
-        val alertDialog = AlertDialog.Builder(this)
-            .setView(dialogView)
-            .create()
-
-        alertOkButton.setOnClickListener {
-            alertDialog.dismiss()
-        }
-        alertDialog.show()
-    }
-
-
 }
