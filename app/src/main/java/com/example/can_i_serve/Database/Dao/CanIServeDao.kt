@@ -23,4 +23,8 @@ interface CanIServeDao {
 
     @Query("SELECT * FROM Register")
      fun getAllUsers(): List<RegisterDetailsDb>
+
+    @Query("SELECT * FROM Register WHERE phone = :phoneNumber")
+     fun getUserByPhoneNumber(phoneNumber: String): RegisterDetailsDb?
+
 }

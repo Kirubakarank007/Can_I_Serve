@@ -44,6 +44,7 @@
         <activity
             android:name=".Activity.OTPVerificationActivity"
             android:launchMode="singleTop" />
+        <activity android:name=".Activity.ProviderLogin" />
     </application>
 
 </manifest>

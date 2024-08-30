@@ -47,7 +47,7 @@ class OTPVerificationActivity: AppCompatActivity() {
     private fun verifyOtp(credentiale: PhoneAuthCredential, data: RegisterDetails) {
         mAuth.signInWithCredential(credentiale).addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                val intent = Intent(this@OTPVerificationActivity, PasswordActivity::class.java)
+                val intent = Intent(this, PasswordActivity::class.java)
                 intent.putExtra("register-details",data)
                 startActivity(intent)
                 finish()
