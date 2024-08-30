@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import com.example.can_i_serve.Database.AppDatabase
+import com.example.can_i_serve.Database.DataClass.RegisterDetailsDb
 import com.example.can_i_serve.databinding.AlertDialogeBinding
 
 class utils {
@@ -41,5 +43,12 @@ class utils {
             alertDialog.show()
         }
 
+         fun getPhoneNumberList(context: Context, db: List<RegisterDetailsDb>): MutableList<String> {
+            val list= mutableListOf<String>()
+            for(i in 0..db.size.minus(1)){
+                list.add(db[i].phone.toString())
+            }
+            return list
+        }
     }
 }
