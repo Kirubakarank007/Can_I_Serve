@@ -46,6 +46,11 @@ class LoginActivity:AppCompatActivity() {
                 if (user?.password == passwordText) {
                     if (user.role == 0) {
                         val intent = Intent(this@LoginActivity, ProviderLogin::class.java)
+                        intent.putExtra("role",0)
+                        startActivity(intent)
+                    }else{
+                        val intent=Intent(this@LoginActivity,SeekerLogin::class.java)
+                        intent.putExtra("role",1)
                         startActivity(intent)
                     }
                 } else {

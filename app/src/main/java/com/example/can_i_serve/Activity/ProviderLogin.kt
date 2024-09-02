@@ -9,6 +9,7 @@ import com.example.can_i_serve.databinding.ProviderProfileActivityBinding
 
 class ProviderLogin:AppCompatActivity() {
     private lateinit var binding: ProviderProfileActivityBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
