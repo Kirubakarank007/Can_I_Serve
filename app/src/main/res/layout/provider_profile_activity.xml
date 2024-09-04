@@ -55,8 +55,8 @@
     <!-- Middle-->
 
     <!--Footer-->
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/center"
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/Header"
