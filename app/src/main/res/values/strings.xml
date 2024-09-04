@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Can_I_Serve</string>
+    <string name="seeker">Seeker</string>
+    <string name="provider">Provider</string>
 </resources>

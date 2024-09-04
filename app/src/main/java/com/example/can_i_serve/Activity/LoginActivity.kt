@@ -44,15 +44,15 @@ class LoginActivity:AppCompatActivity() {
 
                 // Now check the result on the Main thread
                 if (user?.password == passwordText) {
-                    if (user.role == 0) {
+//                    if (user.role == 0) {
                         val intent = Intent(this@LoginActivity, ProviderLogin::class.java)
-                        intent.putExtra("role",0)
+                        intent.putExtra("role",user.role)
                         startActivity(intent)
-                    }else{
-                        val intent=Intent(this@LoginActivity,SeekerLogin::class.java)
-                        intent.putExtra("role",1)
-                        startActivity(intent)
-                    }
+//                    }else{
+//                        val intent=Intent(this@LoginActivity,SeekerLogin::class.java)
+//                        intent.putExtra("role",1)
+//                        startActivity(intent)
+//                    }
                 } else {
                     utils.showAlert(this@LoginActivity, "Invalid credentials")
                 }

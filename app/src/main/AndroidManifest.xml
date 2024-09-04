@@ -45,7 +45,7 @@
             android:name=".Activity.OTPVerificationActivity"
             android:launchMode="singleTop" />
         <activity android:name=".Activity.ProviderLogin" />
-        <activity android:name=".Activity.SeekerLogin" />
+<!--        <activity android:name=".Activity.SeekerLogin" />-->
     </application>
 
 </manifest>
